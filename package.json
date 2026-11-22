@@ -1,0 +1,26 @@
+{
+  "name": "plan-postcard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Сравнение двух планов EXPLAIN PostgreSQL: что изменилось, где ушло время, где оптимизатор ошибся; всё в браузере, результат — открытка для переписки",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-concurrency=1 \"test/*.test.ts\"",
+    "fixtures": "node scripts/gen-fixtures.ts",
+    "site": "node scripts/build-site.mjs",
+    "serve": "node scripts/serve.mjs",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "embedded-postgres": "18.3.0-beta.17",
+    "esbuild": "^0.25.0",
+    "pg": "^8.16.0",
+    "typescript": "^5.9.0"
+  }
+}
